@@ -19,9 +19,9 @@
         "web-vitals": "^2.1.0"
     },
     "scripts": {
-        "start": "craco start",
-        "build": "craco build",
-        "test": "craco test",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
@@ -46,7 +46,6 @@
         "@tailwindcss/line-clamp": "^0.3.1",
         "@types/react-test-renderer": "^17.0.1",
         "autoprefixer": "^9",
-        "craco-alias": "^3.0.1",
         "postcss": "^7",
         "postcss-import": "^14.0.2",
         "postcss-nesting": "^10.1.2",
