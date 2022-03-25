@@ -1,0 +1,13 @@
+.container {
+    @apply flex items-center justify-start gap-0.5;
+    padding: 0 4px;
+}
+
+.star {
+    @apply text-xl text-[#d9d9d9];
+    @apply before:inline-block before:content-['⭑'];
+}
+
+.active {
+    @apply text-[#ffc801];
+}

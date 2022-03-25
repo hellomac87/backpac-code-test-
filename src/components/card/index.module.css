@@ -1,0 +1,50 @@
+.container {
+    @apply flex border border-gray-200;
+    @apply hover:shadow-sm;
+}
+
+.vertical {
+    @apply min-w-[250px] flex-col;
+}
+
+.horizontal {
+    @apply min-w-[350px] flex-row;
+}
+
+.thumbnail {
+    @apply block bg-no-repeat bg-cover bg-center w-full h-auto relative;
+    @apply after:block after:content-[''] after:pb-[100%];
+}
+
+.thumbnailVertical {
+    @apply min-w-[250px];
+}
+
+.thumbnailHorizontal {
+    @apply min-w-[120px];
+}
+
+.body {
+    @apply flex flex-col justify-between h-auto;
+}
+
+.info {
+    @apply px-2 py-2.5;
+}
+
+.label {
+    @apply text-xs h-[15px] mb-2 text-gray-500 overflow-hidden line-clamp-1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title {
+    @apply text-xs overflow-hidden whitespace-normal text-gray-800;
+}
+
+.rating {
+    @apply hidden items-start justify-center flex-col h-12 px-2.5 border-t border-[#d9d9d9];
+}
+.visible {
+    @apply flex;
+}
