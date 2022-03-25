@@ -16,6 +16,14 @@
     @apply after:block after:content-[''] after:pb-[100%];
 }
 
+.thumbnailVertical {
+    @apply min-w-[250px];
+}
+
+.thumbnailHorizontal {
+    @apply min-w-[120px];
+}
+
 .body {
     @apply flex flex-col justify-between h-auto;
 }

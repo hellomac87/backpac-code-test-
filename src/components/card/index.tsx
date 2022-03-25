@@ -13,12 +13,19 @@ export type CardProps = {
     comment?: string;
 };
 
-export type CardDirectionType = 'vertical' | 'horizental';
+export type CardDirectionType = 'vertical' | 'horizontal';
 
 function Card({ image, label, title, rate, direction = 'vertical', comment }: CardProps) {
     return (
         <div className={clsx(styles.container, styles[direction])}>
-            <div className={styles.thumbnail} style={{ backgroundImage: `url(${image})` }} />
+            <div
+                className={clsx(
+                    styles.thumbnail,
+                    { [styles.thumbnailVertical]: direction === 'vertical' },
+                    { [styles.thumbnailHorizontal]: direction === 'horizontal' }
+                )}
+                style={{ backgroundImage: `url(${image})` }}
+            />
             <div className={styles.body}>
                 <div className={styles.info}>
                     <label className={styles.label}>{label}</label>
