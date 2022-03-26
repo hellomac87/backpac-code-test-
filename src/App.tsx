@@ -23,6 +23,11 @@ function App() {
                     comment={
                         '전복이 오동통통해서 맛있네요 회랑 같이 구워서 먹으려고 샀어요 덕분에 맛있는 식사했습니다^^ 감사합니다 손질이 다 잘돼있어서 편하게 요리할 수 있네요자주 시켜 먹을께요'
                     }
+                    priceInfo={{
+                        origin: 13900,
+                        priceSale: 1000,
+                        saleRate: '93%',
+                    }}
                 />
             </ViewItem>
             <ViewItem width={500}>
