@@ -1,5 +1,5 @@
 .container {
-    @apply w-full max-w-[1024px] flex flex-wrap m-auto mb-8 gap-[8px] overflow-hidden;
+    @apply flex flex-wrap m-auto mb-8 gap-[8px] overflow-hidden;
 }
 
 .full {

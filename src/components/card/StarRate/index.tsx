@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import styles from './index.module.css';
+import styles from './StarRate.module.css';
 
 type Props = {
     rate?: 1 | 2 | 3 | 4 | 5;
