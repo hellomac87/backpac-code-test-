@@ -21,7 +21,7 @@
 }
 
 .thumbnailHorizontal {
-    @apply min-w-[50%];
+    @apply w-[40%] min-w-[120px];
 }
 
 .body {
@@ -33,7 +33,7 @@
 }
 
 .bodyHorizontal {
-    @apply min-w-[50%];
+    @apply w-[60%];
 }
 
 .info {
@@ -41,7 +41,11 @@
 }
 
 .infoVertical {
-    @apply h-[calc(100%-54px)];
+    @apply h-[120px];
+}
+
+.infoHorizontal {
+    @apply h-[140px];
 }
 
 .name {
