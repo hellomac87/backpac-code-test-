@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from './StarRateComment.module.css';
 
 type Props = {
     comment?: string;

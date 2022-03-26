@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
-import styles from './index.module.css';
+import styles from './ViewList.module.css';
 
 type Props = {
     type?: 'full' | 'half' | 'quarter';

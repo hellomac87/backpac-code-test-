@@ -2,18 +2,18 @@ import clsx from 'clsx';
 
 import { convertToWon } from 'src/utils/price';
 import { CardDirection } from 'src/types/card';
-
-import StarRateComment from './StarRateComment';
-import StarRate from './StarRate';
-
-import styles from './index.module.css';
 import { Post } from 'src/types/post';
 
-export type CardProps = Omit<Post, 'id'> & {
+import StarRateComment from 'src/components/card/StarRateComment';
+import StarRate from 'src/components/card/StarRate';
+
+import styles from './CardTemplate.module.css';
+
+export type Props = Omit<Post, 'id'> & {
     direction?: CardDirection;
 };
 
-function Card({ image, name, title, priceInfo, rate, direction = 'vertical', comment }: CardProps) {
+function CardTemplate({ image, name, title, priceInfo, rate, direction = 'vertical', comment }: Props) {
     const isVertical = direction === 'vertical';
     const isHorizontal = direction === 'horizontal';
     return (
@@ -64,4 +64,4 @@ function Card({ image, name, title, priceInfo, rate, direction = 'vertical', com
     );
 }
 
-export default Card;
+export default CardTemplate;

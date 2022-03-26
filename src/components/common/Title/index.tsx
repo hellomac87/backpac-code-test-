@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './index.module.css';
+import styles from './Title.module.css';
 
 type Props = {};
 

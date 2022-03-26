@@ -1,18 +1,23 @@
-import Card from 'src/components/card';
+import { useMedia } from 'react-use';
+
+import { dummyList01, dummyList02 } from 'src/constant/dummy';
+
+import Layout from 'src/components/common/Layout';
+import CardTemplate from 'src/components/card/CardTemplate';
 import Title from 'src/components/common/Title';
 import ViewItem from 'src/components/common/ViewItem';
 import ViewList from 'src/components/common/ViewList';
 import InputForm from 'src/components/InputForm';
-import { dummyList01, dummyList02 } from 'src/constant/dummy';
 
 function App() {
+    const isMobile = useMedia('(max-width: 768px)');
     return (
-        <>
+        <Layout>
             <Title>Card UI</Title>
-            <ViewList type='quarter'>
+            <ViewList type={isMobile ? 'half' : 'quarter'}>
                 {dummyList01.map((post) => (
                     <ViewItem key={post.id}>
-                        <Card
+                        <CardTemplate
                             image={post.image}
                             name={post.name}
                             title={post.title}
@@ -24,10 +29,10 @@ function App() {
                 ))}
             </ViewList>
 
-            <ViewList type='half'>
+            <ViewList type={isMobile ? 'full' : 'half'}>
                 {dummyList02.map((post) => (
                     <ViewItem key={post.id}>
-                        <Card
+                        <CardTemplate
                             image={post.image}
                             name={post.name}
                             title={post.title}
@@ -70,7 +75,7 @@ function App() {
                     <InputForm value={''} placeholder={'placeholder readonly'} maxLength={50} readOnly />
                 </ViewItem>
             </ViewList>
-        </>
+        </Layout>
     );
 }
 

@@ -1,5 +1,6 @@
 import React, { TextareaHTMLAttributes, useState } from 'react';
-import styles from './index.module.css';
+
+import styles from './InputForm.module.css';
 
 type Props = TextareaHTMLAttributes<HTMLTextAreaElement> & {
     value: string;
