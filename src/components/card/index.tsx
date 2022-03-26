@@ -1,13 +1,21 @@
-import Comment from './Comment';
+import clsx from 'clsx';
+
+import { convertToWon } from 'src/utils/price';
+
+import StarRateComment from './StarRateComment';
 import StarRate from './StarRate';
 
 import styles from './index.module.css';
-import clsx from 'clsx';
 
 export type CardProps = {
     image: string;
     label: string;
     title: string;
+    priceInfo?: {
+        origin: number;
+        priceSale?: number;
+        saleRate?: number;
+    };
     rate?: 1 | 2 | 3 | 4 | 5;
     direction?: CardDirectionType;
     comment?: string;
@@ -15,7 +23,7 @@ export type CardProps = {
 
 export type CardDirectionType = 'vertical' | 'horizontal';
 
-function Card({ image, label, title, rate, direction = 'vertical', comment }: CardProps) {
+function Card({ image, label, title, priceInfo, rate, direction = 'vertical', comment }: CardProps) {
     return (
         <div className={clsx(styles.container, styles[direction])}>
             <div
@@ -30,11 +38,22 @@ function Card({ image, label, title, rate, direction = 'vertical', comment }: Ca
                 <div className={styles.info}>
                     <label className={styles.label}>{label}</label>
                     <div className={styles.title}>{title}</div>
+                    {priceInfo && (
+                        <div className={styles.priceWrap}>
+                            {priceInfo.saleRate && <span className={styles.saleRate}>{priceInfo.saleRate}%</span>}
+                            <span className={styles.priceSale}>
+                                {convertToWon(priceInfo.priceSale || priceInfo.origin)}
+                            </span>
+                            {priceInfo.priceSale && (
+                                <span className={styles.priceOrigin}>{convertToWon(priceInfo.origin)}</span>
+                            )}
+                        </div>
+                    )}
                 </div>
 
                 <div className={clsx(styles.rating, { [styles.visible]: Boolean(rate) })}>
                     <StarRate rate={rate} />
-                    <Comment comment={comment} />
+                    <StarRateComment comment={comment} />
                 </div>
             </div>
         </div>

@@ -1,8 +1,0 @@
-.container {
-    @apply h-4 text-xs leading-normal overflow-hidden;
-    color: #666;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-}
