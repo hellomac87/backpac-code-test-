@@ -15,8 +15,7 @@ function StarRate({ rate }: Props) {
 
     return (
         <div className={styles.container}>
-            {Array(starCount)
-                .fill(0)
+            {[...Array(starCount)]
                 .map((_, i) => i + 1)
                 .map((idx) => {
                     const active = idx <= rate;
