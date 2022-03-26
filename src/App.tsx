@@ -26,7 +26,7 @@ function App() {
                     priceInfo={{
                         origin: 13900,
                         priceSale: 1000,
-                        saleRate: '93%',
+                        saleRate: 93,
                     }}
                 />
             </ViewItem>

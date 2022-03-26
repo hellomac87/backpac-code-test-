@@ -1,8 +1,11 @@
+import clsx from 'clsx';
+
+import { convertToWon } from 'src/utils/price';
+
 import StarRateComment from './StarRateComment';
 import StarRate from './StarRate';
 
 import styles from './index.module.css';
-import clsx from 'clsx';
 
 export type CardProps = {
     image: string;
@@ -11,7 +14,7 @@ export type CardProps = {
     priceInfo?: {
         origin: number;
         priceSale?: number;
-        saleRate?: string;
+        saleRate?: number;
     };
     rate?: 1 | 2 | 3 | 4 | 5;
     direction?: CardDirectionType;
@@ -37,9 +40,13 @@ function Card({ image, label, title, priceInfo, rate, direction = 'vertical', co
                     <div className={styles.title}>{title}</div>
                     {priceInfo && (
                         <div className={styles.priceWrap}>
-                            {priceInfo.saleRate && <span className={styles.saleRate}>{priceInfo.saleRate}</span>}
-                            <span className={styles.priceSale}>{priceInfo.priceSale || priceInfo.origin}원</span>
-                            {priceInfo.priceSale && <span className={styles.priceOrigin}>{priceInfo.origin}원</span>}
+                            {priceInfo.saleRate && <span className={styles.saleRate}>{priceInfo.saleRate}%</span>}
+                            <span className={styles.priceSale}>
+                                {convertToWon(priceInfo.priceSale || priceInfo.origin)}
+                            </span>
+                            {priceInfo.priceSale && (
+                                <span className={styles.priceOrigin}>{convertToWon(priceInfo.origin)}</span>
+                            )}
                         </div>
                     )}
                 </div>
