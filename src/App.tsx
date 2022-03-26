@@ -9,9 +9,9 @@ function App() {
     return (
         <>
             <Title>Card UI</Title>
-            <ViewList>
+            <ViewList type='quarter'>
                 {dummyList01.map((post) => (
-                    <ViewItem width={'24%'} key={post.id}>
+                    <ViewItem key={post.id}>
                         <Card
                             image={post.image}
                             name={post.name}
@@ -24,9 +24,9 @@ function App() {
                 ))}
             </ViewList>
 
-            <ViewList>
+            <ViewList type='half'>
                 {dummyList02.map((post) => (
-                    <ViewItem width={'49%'} key={post.id}>
+                    <ViewItem key={post.id}>
                         <Card
                             image={post.image}
                             name={post.name}
