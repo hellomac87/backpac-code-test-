@@ -1,42 +1,40 @@
 import clsx from 'clsx';
 
 import { convertToWon } from 'src/utils/price';
+import { CardDirection } from 'src/types/card';
 
 import StarRateComment from './StarRateComment';
 import StarRate from './StarRate';
 
 import styles from './index.module.css';
+import { Post } from 'src/types/post';
 
-export type CardProps = {
-    image: string;
-    label: string;
-    title: string;
-    priceInfo?: {
-        origin: number;
-        priceSale?: number;
-        saleRate?: number;
-    };
-    rate?: 1 | 2 | 3 | 4 | 5;
-    direction?: CardDirectionType;
-    comment?: string;
+export type CardProps = Omit<Post, 'id'> & {
+    direction?: CardDirection;
 };
 
-export type CardDirectionType = 'vertical' | 'horizontal';
-
-function Card({ image, label, title, priceInfo, rate, direction = 'vertical', comment }: CardProps) {
+function Card({ image, name, title, priceInfo, rate, direction = 'vertical', comment }: CardProps) {
+    const isVertical = direction === 'vertical';
+    const isHorizontal = direction === 'horizontal';
     return (
         <div className={clsx(styles.container, styles[direction])}>
             <div
                 className={clsx(
                     styles.thumbnail,
-                    { [styles.thumbnailVertical]: direction === 'vertical' },
-                    { [styles.thumbnailHorizontal]: direction === 'horizontal' }
+                    { [styles.thumbnailVertical]: isVertical },
+                    { [styles.thumbnailHorizontal]: isHorizontal }
                 )}
                 style={{ backgroundImage: `url(${image})` }}
             />
-            <div className={styles.body}>
-                <div className={styles.info}>
-                    <label className={styles.label}>{label}</label>
+            <div
+                className={clsx(
+                    styles.body,
+                    { [styles.bodyVertical]: isVertical },
+                    { [styles.bodyHorizontal]: isHorizontal }
+                )}
+            >
+                <div className={clsx(styles.info, { [styles.infoVertical]: isVertical })}>
+                    <div className={styles.name}>{name}</div>
                     <div className={styles.title}>{title}</div>
                     {priceInfo && (
                         <div className={styles.priceWrap}>

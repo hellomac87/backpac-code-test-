@@ -4,11 +4,11 @@
 }
 
 .vertical {
-    @apply min-w-[250px] flex-col;
+    @apply flex-col;
 }
 
 .horizontal {
-    @apply min-w-[350px] flex-row;
+    @apply flex-row;
 }
 
 .thumbnail {
@@ -17,23 +17,35 @@
 }
 
 .thumbnailVertical {
-    @apply min-w-[250px];
+    @apply min-w-full;
 }
 
 .thumbnailHorizontal {
-    @apply min-w-[120px];
+    @apply min-w-[50%];
 }
 
 .body {
     @apply flex flex-col justify-between h-auto overflow-hidden;
 }
 
+.bodyVertical {
+    @apply min-w-full;
+}
+
+.bodyHorizontal {
+    @apply min-w-[50%];
+}
+
 .info {
     @apply flex-auto px-2 py-2.5;
 }
 
-.label {
-    @apply block text-xs h-[15px] mb-2 text-gray-500  truncate;
+.infoVertical {
+    @apply h-[calc(100%-54px)];
+}
+
+.name {
+    @apply text-xs h-[15px] mb-2 text-gray-500  truncate;
 }
 
 .title {
@@ -45,11 +57,11 @@
 }
 
 .saleRate {
-    @apply text-red-600;
+    @apply text-red-600 mr-2;
 }
 
 .priceSale {
-    @apply ml-2 font-semibold;
+    @apply font-semibold;
 }
 
 .priceOrigin {
@@ -57,7 +69,7 @@
 }
 
 .rating {
-    @apply hidden items-start justify-center flex-col px-2.5 border-t border-[#d9d9d9] gap-1;
+    @apply hidden h-[54px] items-start justify-start flex-col px-2.5 border-t border-[#d9d9d9] gap-1;
 }
 .visible {
     @apply flex;
