@@ -33,7 +33,13 @@ function Card({ image, name, title, priceInfo, rate, direction = 'vertical', com
                     { [styles.bodyHorizontal]: isHorizontal }
                 )}
             >
-                <div className={clsx(styles.info, { [styles.infoVertical]: isVertical })}>
+                <div
+                    className={clsx(
+                        styles.info,
+                        { [styles.infoVertical]: isVertical },
+                        { [styles.infoHorizontal]: isHorizontal }
+                    )}
+                >
                     <div className={styles.name}>{name}</div>
                     <div className={styles.title}>{title}</div>
                     {priceInfo && (

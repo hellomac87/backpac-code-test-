@@ -11,7 +11,7 @@ function App() {
             <Title>Card UI</Title>
             <ViewList>
                 {dummyList01.map((post) => (
-                    <ViewItem width={'20%'}>
+                    <ViewItem width={'24%'}>
                         <Card
                             key={post.id}
                             image={post.image}
@@ -27,7 +27,7 @@ function App() {
 
             <ViewList>
                 {dummyList02.map((post) => (
-                    <ViewItem width={'33%'}>
+                    <ViewItem width={'49%'}>
                         <Card
                             key={post.id}
                             image={post.image}
