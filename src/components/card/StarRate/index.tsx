@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { FaStar } from 'react-icons/fa';
 
 import styles from './StarRate.module.css';
 
@@ -19,7 +20,7 @@ function StarRate({ rate }: Props) {
                 .map((_, i) => i + 1)
                 .map((idx) => {
                     const active = idx <= rate;
-                    return <div className={clsx(styles.star, { [styles.active]: active })} key={idx} />;
+                    return <FaStar className={clsx(styles.star, { [styles.active]: active })} key={idx} />;
                 })}
         </div>
     );

@@ -11,18 +11,40 @@
 }
 
 .textArea {
-    @apply w-full h-full resize-none p-2 box-border border border-[#e5e7eb] transition-all overflow-auto;
-    @apply focus:outline-none focus:border-[#ff7b30];
-    @apply read-only:text-[#fb923c] read-only:bg-[#f3f4f6] read-only:focus:border-[#d9d9d9];
-    @apply disabled:text-[#9ca3af] disabled:bg-[#f3f4f6];
+    @apply w-full h-full resize-none p-2 box-border border transition-all overflow-auto;
+    border-color: #e5e7eb;
+}
+
+.textArea:focus {
+    @apply outline-none;
+    border-color: #ff7b30;
+}
+
+.textArea:read-only {
+    color: #fb923c;
+    background-color: #f3f4f6;
+    border-color: #d9d9d9;
+}
+
+.textArea:disabled {
+    color: #9ca3af;
+    background-color: #f3f4f6;
 }
 
 .counter {
-    @apply absolute bottom-0 right-0 text-xs text-[#6b7280] z-10 px-1.5 py-2;
+    @apply absolute bottom-0 right-0 text-xs z-10 px-1.5 py-2;
+    color: #6b7280;
 }
 
 .button {
-    @apply flex items-center justify-center w-[80px] h-full bg-[#ffffff] text-[#f97316] cursor-pointer text-xs border border-[#e5e7eb];
+    @apply flex items-center justify-center w-[80px] h-full  cursor-pointer text-xs border;
     transition: all 0.25s ease;
-    @apply hover:border-[#f3f4f6] hover:bg-[#f3f4f6];
+    background-color: #ffffff;
+    color: #f97316;
+    border-color: #e5e7eb;
+}
+
+.button:hover {
+    border-color: #f3f4f6;
+    background-color: #f3f4f6;
 }

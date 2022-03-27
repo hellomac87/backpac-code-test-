@@ -135,6 +135,6 @@ export const products02: Product[] = [
             saleRate: 4,
         },
         rate: 5,
-        comment: '맛있어요.',
+        comment: '최고에용.',
     },
 ];
