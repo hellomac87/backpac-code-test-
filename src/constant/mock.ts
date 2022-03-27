@@ -1,6 +1,6 @@
-import { Post } from 'src/types/post';
+import { Product } from 'src/types/product';
 
-export const dummyList01: Post[] = [
+export const products01: Product[] = [
     {
         id: 'thumb-1457a4bf-bece-4d9a-bff3-3312511c986e',
         image: 'https://image.idus.com/image/files/9a76c4d74abd4408b35114658a773908_512.jpg',
@@ -48,9 +48,33 @@ export const dummyList01: Post[] = [
         },
         rate: 4,
     },
+    {
+        id: 'thumb-eebfff5d-cb0d-43a6-8833-12bb59dbe7e2',
+        image: 'https://image.idus.com/image/files/bf911c8bc8614896aeb7664b40b7cc30_512.jpg',
+        name: '더바른',
+        title: '친구생일 디저트🎁 어버이날 흑임자호박인절미 떡 🖤',
+        priceInfo: {
+            origin: 17400,
+            priceSale: 13900,
+            saleRate: 11,
+        },
+        rate: 5,
+        comment: '아버님 생신 선물로 보내드려서 사진이 없어요. 맛있게 잘 드셨다고해요',
+    },
+    {
+        id: 'thumb-8717d192-2c42-450d-90cc-f691890e403b',
+        image: 'https://image.idus.com/image/files/def2b421ba5f4e2585fda516a15857fc_512.jpg',
+        name: '착한마을 마음이가',
+        title: '마음이가 콩쑥개떡',
+        priceInfo: {
+            origin: 13500,
+        },
+        rate: 5,
+        comment: '가격에비해 양이 푸짐하고 맛도 좋아요 쑥찹쌀떡 생각하시면 될꺼에요 가격대비 강추!!',
+    },
 ];
 
-export const dummyList02: Post[] = [
+export const products02: Product[] = [
     {
         id: 'thumb-bbd56d61-41d0-4678-9c71-ea44320e243f',
         image: 'https://image.idus.com/image/files/73f18243b49d43b6b019cfd12e06747b_512.jpg',
@@ -96,6 +120,19 @@ export const dummyList02: Post[] = [
             origin: 16900,
             priceSale: 13400,
             saleRate: 21,
+        },
+        rate: 5,
+        comment: '맛있어요.',
+    },
+    {
+        id: 'thumb-424d93b4-3efb-49b1-8ea3-e35f73c7467a',
+        image: 'https://image.idus.com/image/files/c97c498af5f742cfb14730d00b565a5b_512.jpg',
+        name: '꿈둥이',
+        title: '상콤달콤🎉오렌지망고패션후르츠청🌱생일선물',
+        priceInfo: {
+            origin: 12000,
+            priceSale: 11500,
+            saleRate: 4,
         },
         rate: 5,
         comment: '맛있어요.',

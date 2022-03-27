@@ -2,14 +2,14 @@ import clsx from 'clsx';
 
 import { convertToWon } from 'src/utils/price';
 import { CardDirection } from 'src/types/card';
-import { Post } from 'src/types/post';
+import { Product } from 'src/types/product';
 
 import StarRateComment from 'src/components/card/StarRateComment';
 import StarRate from 'src/components/card/StarRate';
 
 import styles from './CardTemplate.module.css';
 
-export type Props = Omit<Post, 'id'> & {
+export type Props = Omit<Product, 'id'> & {
     direction?: CardDirection;
 };
 

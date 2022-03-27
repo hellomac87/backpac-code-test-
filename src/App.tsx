@@ -1,6 +1,6 @@
 import { useMedia } from 'react-use';
 
-import { dummyList01, dummyList02 } from 'src/constant/dummy';
+import { products01, products02 } from 'src/constant/mock';
 
 import Layout from 'src/components/common/Layout';
 import CardTemplate from 'src/components/card/CardTemplate';
@@ -18,7 +18,7 @@ function App() {
             <Layout>
                 <Title>Card UI</Title>
                 <ViewList type={isMobile ? 'half' : 'quarter'}>
-                    {dummyList01.map((post) => (
+                    {products01.map((post) => (
                         <ViewItem key={post.id}>
                             <CardTemplate
                                 image={post.image}
@@ -33,7 +33,7 @@ function App() {
                 </ViewList>
 
                 <ViewList type={isMobile ? 'full' : 'half'}>
-                    {dummyList02.map((post) => (
+                    {products02.map((post) => (
                         <ViewItem key={post.id}>
                             <CardTemplate
                                 image={post.image}
