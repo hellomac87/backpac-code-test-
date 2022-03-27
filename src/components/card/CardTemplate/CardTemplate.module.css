@@ -1,6 +1,7 @@
 .container {
-    @apply flex border border-[#e5e7eb];
+    @apply flex border;
     @apply hover:shadow-sm;
+    border-color: #e5e7eb;
 }
 
 .vertical {
@@ -54,11 +55,13 @@
 }
 
 .name {
-    @apply text-xs h-[15px] mb-2 truncate text-[#6b7280];
+    @apply text-xs h-[15px] mb-2 truncate;
+    color: #6b7280;
 }
 
 .title {
-    @apply text-xs overflow-hidden whitespace-normal text-[#1f2937];
+    @apply text-xs overflow-hidden whitespace-normal;
+    color: #1f2937;
 }
 
 .priceWrap {
@@ -66,7 +69,8 @@
 }
 
 .saleRate {
-    @apply mr-2 text-[#dc2626];
+    @apply mr-2;
+    color: #dc2626;
 }
 
 .priceSale {
@@ -74,11 +78,13 @@
 }
 
 .priceOrigin {
-    @apply block w-full text-xs line-through text-[#9ca3af];
+    @apply block w-full text-xs line-through;
+    color: #9ca3af;
 }
 
 .rating {
-    @apply hidden h-[54px] items-start justify-start flex-col px-2.5 border-t border-[#d9d9d9] gap-1;
+    @apply hidden h-[54px] items-start justify-start flex-col px-2.5 border-t;
+    border-color: #d9d9d9;
 }
 .visible {
     @apply flex;
