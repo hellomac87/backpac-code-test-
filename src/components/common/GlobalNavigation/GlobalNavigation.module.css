@@ -1,0 +1,7 @@
+.container {
+    @apply w-full border-b border-gray-100;
+}
+
+.positionLayer {
+    @apply max-w-[1024px] m-auto flex justify-center py-4;
+}
