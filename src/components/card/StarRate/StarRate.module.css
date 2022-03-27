@@ -12,5 +12,5 @@
 }
 
 .active {
-    @apply text-yellow-400;
+    @apply text-bpkYellow;
 }
