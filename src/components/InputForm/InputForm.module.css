@@ -26,10 +26,20 @@
     background-color: #f3f4f6;
     border-color: #d9d9d9;
 }
+.textArea:read-only:focus,
+.textArea:read-only:hover {
+    @apply cursor-default;
+    border-color: #e5e7eb;
+}
 
 .textArea:disabled {
+    @apply cursor-not-allowed;
     color: #9ca3af;
     background-color: #f3f4f6;
+}
+
+.textArea:disabled:hover {
+    border-color: #e5e7eb;
 }
 
 .counter {
