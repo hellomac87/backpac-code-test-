@@ -10,6 +10,10 @@
 
 `$ yarn start`
 
-## demo
+demo
 
-[demo sites - netlify](https://lively-trifle-99245e.netlify.app/)
+[demo-site(netlify)](https://lively-trifle-99245e.netlify.app/)
+
+## stack
+
+react(creat-react-app), tailwindcss
