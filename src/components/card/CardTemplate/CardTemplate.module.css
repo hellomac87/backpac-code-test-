@@ -17,9 +17,8 @@
 }
 
 .thumbnail:after {
-    display: block;
+    @apply block pb-[100%];
     content: '';
-    padding-bottom: 100%;
 }
 
 .thumbnailVertical {

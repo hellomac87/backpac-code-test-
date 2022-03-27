@@ -4,7 +4,11 @@
 
 .star {
     @apply text-xl text-gray-300;
-    @apply before:inline-block before:content-['⭑'];
+}
+
+.star:before {
+    @apply inline-block;
+    content: '⭑';
 }
 
 .active {
