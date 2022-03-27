@@ -13,7 +13,13 @@
 
 .thumbnail {
     @apply block bg-no-repeat bg-cover bg-center w-full h-auto relative;
-    @apply after:block after:content-[''] after:pb-[100%];
+    /* @apply after:block after:content-[''] after:pb-[100%]; */
+}
+
+.thumbnail:after {
+    display: block;
+    content: '';
+    padding-bottom: 100%;
 }
 
 .thumbnailVertical {
