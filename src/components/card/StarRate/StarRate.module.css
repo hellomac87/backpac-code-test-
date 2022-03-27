@@ -1,16 +1,16 @@
 .container {
-    @apply flex items-center justify-start gap-0.5;
+    @apply flex items-center justify-start mr-[1px] last:mr-0;
 }
 
 .star {
-    @apply text-xl text-gray-300;
+    @apply text-xl text-[#d1d5db];
+}
+
+.star.active {
+    @apply text-[#ffc500];
 }
 
 .star:before {
     @apply inline-block;
     content: '⭑';
-}
-
-.active {
-    @apply text-bpkYellow;
 }

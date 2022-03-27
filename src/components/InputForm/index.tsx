@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { TextareaHTMLAttributes, useState } from 'react';
 
 import styles from './InputForm.module.css';
@@ -27,7 +28,7 @@ function InputForm({ value, placeholder, maxLength, disabled = false, readOnly =
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <label className={styles.label}>
+            <label className={clsx(styles.label, { [styles.active]: isDirty })}>
                 <textarea
                     className={styles.textArea}
                     value={formValue}
