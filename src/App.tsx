@@ -73,10 +73,6 @@ function App() {
                     <ViewItem>
                         <InputForm value={'readonly'} placeholder={'placeholder'} maxLength={50} readOnly />
                     </ViewItem>
-
-                    <ViewItem>
-                        <InputForm value={''} placeholder={'placeholder readonly'} maxLength={50} readOnly />
-                    </ViewItem>
                 </ViewList>
             </Layout>
         </>

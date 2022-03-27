@@ -36,6 +36,13 @@
     @apply cursor-not-allowed;
     color: #9ca3af;
     background-color: #f3f4f6;
+    border-color: #d9d9d9;
+}
+
+.textArea:disabled:focus,
+.textArea:disabled:hover {
+    background-color: #f3f4f6;
+    border-color: #d9d9d9;
 }
 
 .textArea:disabled:hover {
