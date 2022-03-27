@@ -16,4 +16,4 @@ demo
 
 ## stack
 
-react(creat-react-app), tailwindcss
+react(creat-react-app), typescript, tailwindcss
