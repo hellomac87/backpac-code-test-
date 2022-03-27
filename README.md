@@ -14,6 +14,6 @@ demo
 
 [demo-site(netlify)](https://lively-trifle-99245e.netlify.app/)
 
-## stack
+stack
 
 react(creat-react-app), typescript, tailwindcss
