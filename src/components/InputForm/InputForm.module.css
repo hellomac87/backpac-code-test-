@@ -12,6 +12,7 @@
 
 .textArea {
     @apply w-full h-full resize-none p-2 box-border border transition-all overflow-auto;
+    -ms-overflow-style: none
     border-color: #e5e7eb;
 }
 
