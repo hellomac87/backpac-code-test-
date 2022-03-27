@@ -1,24 +1,28 @@
 .form {
-    @apply flex items-center justify-between h-20 gap-1.5;
+    @apply flex items-center justify-between h-20;
 }
 
 .label {
-    @apply relative h-full flex-auto;
+    @apply relative h-full w-full;
+}
+
+.label.active {
+    @apply w-[calc(100%-88px)];
 }
 
 .textArea {
-    @apply w-full h-full resize-none p-2 box-border border border-gray-200 transition-all;
+    @apply w-full h-full resize-none p-2 box-border border border-[#e5e7eb] transition-all overflow-auto;
     @apply focus:outline-none focus:border-[#ff7b30];
-    @apply read-only:text-orange-400 read-only:bg-gray-100 read-only:focus:border-[#d9d9d9];
-    @apply disabled:text-[gray] disabled:bg-gray-100;
+    @apply read-only:text-[#fb923c] read-only:bg-[#f3f4f6] read-only:focus:border-[#d9d9d9];
+    @apply disabled:text-[#9ca3af] disabled:bg-[#f3f4f6];
 }
 
 .counter {
-    @apply absolute bottom-0 right-0 text-xs text-gray-500 z-10 px-1.5 py-2;
+    @apply absolute bottom-0 right-0 text-xs text-[#6b7280] z-10 px-1.5 py-2;
 }
 
 .button {
-    @apply w-20 h-full bg-white text-orange-500 cursor-pointer text-xs border border-gray-200;
+    @apply flex items-center justify-center w-[80px] h-full bg-[#ffffff] text-[#f97316] cursor-pointer text-xs border border-[#e5e7eb];
     transition: all 0.25s ease;
-    @apply hover:border-gray-100 hover:bg-gray-100;
+    @apply hover:border-[#f3f4f6] hover:bg-[#f3f4f6];
 }

@@ -1,5 +1,5 @@
 .container {
-    @apply flex border border-gray-200;
+    @apply flex border border-[#e5e7eb];
     @apply hover:shadow-sm;
 }
 
@@ -54,11 +54,11 @@
 }
 
 .name {
-    @apply text-xs h-[15px] mb-2 text-gray-500  truncate;
+    @apply text-xs h-[15px] mb-2 truncate text-[#6b7280];
 }
 
 .title {
-    @apply text-xs overflow-hidden whitespace-normal text-gray-800;
+    @apply text-xs overflow-hidden whitespace-normal text-[#1f2937];
 }
 
 .priceWrap {
@@ -66,7 +66,7 @@
 }
 
 .saleRate {
-    @apply text-red-600 mr-2;
+    @apply mr-2 text-[#dc2626];
 }
 
 .priceSale {
@@ -74,7 +74,7 @@
 }
 
 .priceOrigin {
-    @apply block w-full text-xs text-gray-400 line-through;
+    @apply block w-full text-xs line-through text-[#9ca3af];
 }
 
 .rating {

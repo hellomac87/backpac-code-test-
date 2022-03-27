@@ -1,9 +1,12 @@
 .container {
-    @apply flex flex-wrap m-auto mb-8 gap-[8px] overflow-hidden;
+    @apply flex flex-wrap m-auto mb-8 overflow-hidden;
+}
+
+.container li {
+    @apply mb-2;
 }
 
 .full {
-    @apply gap-x-0;
 }
 
 .full li {
@@ -11,9 +14,17 @@
 }
 
 .half li {
-    @apply w-[calc(50%-8px)];
+    @apply w-[calc(50%-4px)] mr-[8px];
+}
+
+.half li:nth-child(2n) {
+    @apply mr-0;
 }
 
 .quarter li {
-    @apply w-[calc(25%-8px)];
+    @apply w-[calc(25%-8px)] mr-[10px];
+}
+
+.quarter li:nth-child(4n) {
+    @apply mr-0;
 }
